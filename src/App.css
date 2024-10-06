@@ -1,0 +1,125 @@
+.ButtonMain {
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 139 99 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.MethodologyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "methodElem1 methodElem2"
+    "methodImg methodElem3"
+    "methodImg methodElem4";
+  gap: 20px; /* Пространство между элементами */
+  padding: 20px; /* Внешний отступ для всей сетки */
+}
+
+.MethodologyElement {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 41 41 / var(--tw-bg-opacity));
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  min-height: 424px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: methodElem;
+}
+
+.MethodologyTextElement {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.MethodologyMainText {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+.MethodologyAdditionalText {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.MethodologyImg {
+  grid-area: methodImg;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+
+.MethodologyElement:nth-child(1) {
+  grid-area: methodElem1;
+}
+.MethodologyElement:nth-child(2) {
+  grid-area: methodElem2;
+  background-color: #f28b63;
+  color: black;
+}
+.MethodologyElement:nth-child(3) {
+  grid-area: methodElem3;
+}
+.MethodologyElement:nth-child(4) {
+  grid-area: methodElem4;
+}
+
+.SessionBlock {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "sesElem1 sesImg1"
+    "sesElem2 sesImg1";
+}
+
+.SessionElement {
+  border-radius: 24px;
+}
+
+.SessionElement:nth-child(1) {
+  grid-area: sesElem1;
+}
+
+.SessionElement:nth-child(2) {
+  grid-area: sesElem2;
+}
+
+.SessionImg {
+  grid-area: sesImg1;
+}
+
+.Session2Block {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    " ses2Img1 ses2Elem1"
+    " ses2Img1 ses2Elem2";
+}
+
+.Session2Element {
+  border-radius: 24px;
+}
+
+.Session2Element:nth-child(1) {
+  grid-area: ses2Elem1;
+}
+
+.Session2Element:nth-child(2) {
+  grid-area: ses2Elem2;
+}
+
+.Session2Img {
+  grid-area: ses2Img1;
+}
