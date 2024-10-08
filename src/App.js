@@ -8,8 +8,8 @@ import Massage4 from "./assets/img/Massage4.png";
 
 function App() {
   return (
-    <main className="">
-      <header className="bg-[#292929] flex mx-[100px]  mt-10 p-5 border rounded-full border-none justify-between">
+    <main className="w-full">
+      <header className="bg-[#292929] flex mx-[100px]  mt-10 p-5 border rounded-full border-none justify-between max-xl:hidden">
         <div className="flex text-center items-center gap-10">
           <div className="flex gap-10">
             <Logo />
@@ -27,14 +27,14 @@ function App() {
           <button className="ButtonMain">Contact me</button>
         </nav>
       </header>
-      <section className="mx-[100px]">
+      <section className="max-w-[1320px] flex flex-col justify-center m-auto">
         <div>
-          <h1 className="text-center pt-12 text-[96px] leading-[100px] font-medium">
+          <h1 className="text-center pt-12 text-[96px] leading-[100px] font-medium max-sm:text-[36px] max-sm:leading-[36px]">
             Physiotherapist & massage therapist Viktor Lazarev
           </h1>
         </div>
-        <div className="flex gap-10 mt-10">
-          <div className="bg-[#292929] p-10 rounded-3xl flex flex-col justify-between">
+        <div className="flex gap-10 mt-10 max-sm:flex-col">
+          <div className="bg-[#292929] p-10 rounded-3xl flex flex-col justify-between max-w-[424px] min-h-[462px] max-sm:max-w-full">
             <Cuts />
             <div className="flex gap-10 flex-col">
               <p className="text-[24px] font-medium w-full">
@@ -44,10 +44,14 @@ function App() {
               <button className="ButtonMain py-5">View massage programs</button>
             </div>
           </div>
-          <img src={Massage} alt="fee" />
+          <img
+            src={Massage}
+            alt="fee"
+            className="w-full h-auto max-w-[872px] max-xl:max-w-[400px] max-lg:max-w-[320px] max-sm:max-w-full object-contain"
+          />
         </div>
       </section>
-      <section className="flex flex-col bg-[#E8E8E8] text-center mt-32 rounded-[60px]">
+      <section className="flex flex-col bg-[#E8E8E8] text-center mt-32 rounded-[60px] w-full m-auto">
         <h3 className="text-[95px] font-semibold pt-20 text-black">
           My methodology
         </h3>
@@ -57,7 +61,7 @@ function App() {
           effective way to reduce the risk of pain syndromes. I strive not just
           to treat, but to prevent problems
         </p>
-        <div className="MethodologyGrid mx-[100px] gap-10 pt-20">
+        <div className="MethodologyGrid max-w-[1320px] m-auto gap-10 pt-20">
           <div className="MethodologyElement">
             <Logo />
             <div className="MethodologyTextElement">
@@ -121,7 +125,7 @@ function App() {
           I take an individualized approach to each client, taking into account
           their unique physiological characteristics and goals
         </p>
-        <div className="flex flex-col gap-10 mx-[100px] mt-10">
+        <div className="flex flex-col gap-10 max-w-[1320px] m-auto mt-10">
           <div className="SessionBlock">
             <div className="SessionElement flex bg-[#292929] p-10 gap-10 ">
               <h4 className="text-[40px] font-semibold">Acupuncture</h4>
@@ -180,6 +184,16 @@ function App() {
             </div>
             <img className="Session2Img" src={Massage4} alt="" />
           </div>
+        </div>
+      </section>
+      <section>
+        <h3>About me</h3>
+        <p>
+          My calling is to help people find health and well-being through a
+          holistic approach to physical rehabilitation and therapy
+        </p>
+        <div>
+          <div className="bg-[#292929]"></div>
         </div>
       </section>
       <footer></footer>
