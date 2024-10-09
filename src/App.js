@@ -8,19 +8,25 @@ import Massage4 from "./assets/img/Massage4.png";
 import Doctor from "./assets/img/Doctor.png";
 import Mapp from "./assets/img/Map.png";
 import Media from "./assets/img/Media.png";
+import Burger from "./assets/img/Burger";
 
 function App() {
   return (
     <main className="w-full">
-      <header className="bg-[#292929] flex mx-[100px]  mt-10 p-5 border rounded-full border-none justify-between max-xl:hidden">
+      <header className="bg-[#292929] flex max-w-[1320px] m-auto max-sm:max-w-[350px] mt-10 p-5 border rounded-full border-none justify-between">
         <div className="flex text-center items-center gap-10">
           <div className="flex gap-10">
             <Logo />
             <h1 className="text-[24px] font-semibold">Dr.Lazarev</h1>
           </div>
-          <p className="text-[16px] font-medium">Prague, 10 Pražská str</p>
+          <p className="text-[16px] font-medium max-sm:hidden">
+            Prague, 10 Pražská str
+          </p>
         </div>
-        <nav className="flex gap-20">
+        <div className="hidden max-sm:flex max-sm:items-center">
+          <Burger />
+        </div>
+        <nav className="flex gap-20 max-sm:hidden">
           <ul className="flex items-center gap-5">
             <li>session</li>
             <li>contacts</li>
@@ -32,7 +38,7 @@ function App() {
       </header>
       <section className="max-w-[1320px] flex flex-col justify-center m-auto">
         <div>
-          <h1 className="text-center pt-12 text-[96px] leading-[100px] font-medium max-sm:text-[36px] max-sm:leading-[36px]">
+          <h1 className="text-center pt-12 text-[96px] leading-[100px] font-medium max-sm:text-[36px] max-sm:leading-[36px] max-sm:max-w-[350px] m-auto">
             Physiotherapist & massage therapist Viktor Lazarev
           </h1>
         </div>
@@ -304,7 +310,6 @@ function App() {
         </div>
       </section>
       <footer className="bg-[#E8E8E8] text-black p-10 mt-32 rounded-t-[60px] max-sm:mt-20">
-        {/* <div className="footer_wrapper flex flex-col justify-between"> */}
         <div className="footer_logo flex gap-5 ">
           <Logo />
           <p className="text-[24px] font-bold max-sm:text-[18px]">
@@ -312,7 +317,6 @@ function App() {
           </p>
         </div>
         <p className="footer_year mt-auto">2023</p>
-        {/* </div> */}
         <div className="footer_nav flex flex-col mt-10 gap-10 max-sm:gap-5 max-sm:mb-5">
           <p>About me</p>
           <p>Sessions</p>
@@ -320,8 +324,12 @@ function App() {
         </div>
 
         <div className=" footer_info flex flex-col gap-10 text-right items-end">
-          <p className="text-[20px] font-bold">+420 (456) 200-10-41</p>
-          <p className="text-[20px] font-bold">lazarevnfo@gmail.com</p>
+          <p className="text-[20px] font-bold max-sm:text-[16px]">
+            +420 (456) 200-10-41
+          </p>
+          <p className="text-[20px] font-bold max-sm:text-[16px]">
+            lazarevnfo@gmail.com
+          </p>
           <img src={Media} alt={"Media"} className="max-w-[62px]" />
           <p>Privacy Policy</p>
         </div>
