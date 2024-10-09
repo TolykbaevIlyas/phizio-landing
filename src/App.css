@@ -8,6 +8,15 @@
   padding-right: 2.5rem;
 }
 
+.Button {
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border: 1px solid rgb(242 139 99 / var(--tw-bg-opacity));
+  color: rgb(242 139 99 / var(--tw-bg-opacity));
+}
+
 .MethodologyGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -124,6 +133,46 @@
   grid-area: ses2Img1;
 }
 
+.AboutMeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.TestimonalsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "logo navbar info"
+    "year navbar info";
+}
+
+.footer_year {
+  grid-area: year;
+}
+.footer_logo {
+  grid-area: logo;
+}
+
+.footer_wrapper {
+  grid-area: wrapper;
+}
+
+.footer_nav {
+  grid-area: navbar;
+}
+
+.footer_info {
+  grid-area: info;
+}
+
 /* Мобильные устройства в портретной ориентации (до 576px) */
 @media not all and (min-width: 640px) {
   .MethodologyGrid {
@@ -137,6 +186,11 @@
     gap: 20px;
     padding: 20px;
   }
+
+  .MethodologyElement {
+    min-height: 360px;
+  }
+
   .SessionBlock {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -148,6 +202,20 @@
     grid-template-areas:
       "ses2Elem1"
       "ses2Elem2";
+  }
+
+  .SessionElement {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .Session2Element {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .ButtonSession {
+    margin-top: 30px;
   }
 
   .MethodologyImg {
@@ -162,6 +230,40 @@
   .Session2Img {
     display: none;
     visibility: hidden;
+  }
+  .MethodologyMainText {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .MethodologyAdditionalText {
+    font-size: 16px;
+    line-height: 21.6px;
+  }
+  .AboutMeGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .MapGrid {
+    position: none;
+    display: flex;
+    grid-template-columns: 1fr;
+  }
+
+  .MapGridBlock {
+    position: none;
+  }
+  .TestimonalsGrid {
+    grid-template-columns: 1fr;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas:
+      "logo info"
+      "navbar info"
+      "year info";
   }
 }
 

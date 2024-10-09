@@ -5,6 +5,9 @@ import Massage from "./assets/img/Massage.png";
 import Massage2 from "./assets/img/Massage2.png";
 import Massage3 from "./assets/img/Massage3.png";
 import Massage4 from "./assets/img/Massage4.png";
+import Doctor from "./assets/img/Doctor.png";
+import Mapp from "./assets/img/Map.png";
+import Media from "./assets/img/Media.png";
 
 function App() {
   return (
@@ -51,11 +54,11 @@ function App() {
           />
         </div>
       </section>
-      <section className="flex flex-col bg-[#E8E8E8] text-center mt-32 rounded-[60px] w-full m-auto">
-        <h3 className="text-[95px] font-semibold pt-20 text-black">
+      <section className="flex flex-col bg-[#E8E8E8] text-center mt-32 rounded-[60px] w-full m-auto max-sm:mt-[60px] max-sm:gap-5">
+        <h3 className="text-[95px] font-semibold pt-20 text-black max-sm:text-[32px] max-sm:pt-10">
           My methodology
         </h3>
-        <p className="max-w-4xl m-auto text-[24px] font-medium text-black">
+        <p className="max-w-4xl m-auto text-[24px] font-medium text-black max-sm:text-[15px] max-sm:max-w-[351px]">
           My vocation is not only to treat but also to prevent problems. Regular
           massage sessions are not only a pleasant pleasure, but also an
           effective way to reduce the risk of pain syndromes. I strive not just
@@ -119,9 +122,11 @@ function App() {
           <img src={Massage2} alt="massage2" className="MethodologyImg" />
         </div>
       </section>
-      <section className="flex flex-col text-center mt-32">
-        <h3 className="text-[95px] font-semibold">Sessions</h3>
-        <p className="max-w-4xl m-auto text-[24px] font-medium ">
+      <section className="flex flex-col text-center mt-32 max-sm:mt-20">
+        <h3 className="text-[95px] font-semibold max-sm:text-[32px]">
+          Sessions
+        </h3>
+        <p className="max-w-4xl m-auto text-[24px] font-medium max-sm:text-[15px] max-sm:max-w-[351px]">
           I take an individualized approach to each client, taking into account
           their unique physiological characteristics and goals
         </p>
@@ -137,7 +142,9 @@ function App() {
                 </p>
                 <p>34 $ / 60 min</p>
                 <p>44 $ / 90 min</p>
-                <button className="ButtonMain py-5">Sign up</button>
+                <button className="ButtonMain py-5 ButtonSession">
+                  Sign up
+                </button>
               </div>
             </div>
             <div className="SessionElement flex bg-[#292929] p-10 gap-10 ">
@@ -150,7 +157,9 @@ function App() {
                 </p>
                 <p>34 $ / 60 min</p>
                 <p>44 $ / 90 min</p>
-                <button className="ButtonMain py-5">Sign up</button>
+                <button className="ButtonMain py-5 ButtonSession">
+                  Sign up
+                </button>
               </div>
             </div>
             <img className="SessionImg" src={Massage3} alt="" />
@@ -166,10 +175,12 @@ function App() {
                 </p>
                 <p>34 $ / 60 min</p>
                 <p>44 $ / 90 min</p>
-                <button className="ButtonMain py-5">Sign up</button>
+                <button className="ButtonMain py-5 ButtonSession">
+                  Sign up
+                </button>
               </div>
             </div>
-            <div className="Sessio2nElement flex bg-[#292929] p-10 gap-10 ">
+            <div className="Session2Element flex bg-[#292929] p-10 gap-10 ">
               <h4 className="text-[40px] font-semibold">Acupuncture</h4>
               <div className="flex flex-col gap-5 text-left">
                 <p className="text-[16px] font-medium max-w-80">
@@ -179,24 +190,142 @@ function App() {
                 </p>
                 <p>34 $ / 60 min</p>
                 <p>44 $ / 90 min</p>
-                <button className="ButtonMain py-5">Sign up</button>
+                <button className="ButtonMain py-5 ButtonSession">
+                  Sign up
+                </button>
               </div>
             </div>
             <img className="Session2Img" src={Massage4} alt="" />
           </div>
         </div>
       </section>
-      <section>
-        <h3>About me</h3>
-        <p>
+      <section className="flex flex-col text-center items-center m-auto mt-32 gap-10 max-sm:gap-4 max-sm:mt-10 max-w-[1320px]">
+        <h3 className="text-[95px] max-sm:text-[32px]">About me</h3>
+        <p className="text-[24px] leading-[28.8px] max-w-[584px] max-sm:text-[15px] max-sm:max-w-[349px] ">
           My calling is to help people find health and well-being through a
           holistic approach to physical rehabilitation and therapy
         </p>
-        <div>
-          <div className="bg-[#292929]"></div>
+        <div className="AboutMeGrid text-left">
+          <div className="flex flex-col gap-[20px] bg-[#292929] p-10 rounded-[24px] max-sm:mx-[30px]">
+            <h4 className="text-[40px] max-sm:text-[24px]">Victor Lazarev</h4>
+            <p className="text-[16px] max-sm:text-[15px]">
+              I am a massage therapist with 12 years of experience in physical
+              therapy. This allows me to successfully apply advanced methods and
+              techniques adopted in the USA and Europe.
+            </p>
+            <p className="text-[16px] max-sm:text-[15px]">
+              I take an individualized approach to each client, taking into
+              account their unique physiological characteristics and goals.
+            </p>
+            <p className="text-[16px] max-sm:text-[15px]">
+              In the process, I strive not only to alleviate physical ailments,
+              but also to create an atmosphere of harmony and relaxation.
+            </p>
+            <p className="text-[16px] max-sm:text-[15px]">
+              I have two advanced degrees in this field.
+            </p>
+            <p className="text-[16px] max-sm:text-[15px]">
+              key components of our well-being. In my practice as a physical
+              therapist and massage therapist, I strive to help people achieve
+              this harmony. Creating individualized recovery programs and body
+              care plans for each patient.
+            </p>
+            <div className="flex gap-5 max-sm:flex-col mt-auto">
+              <button className="ButtonMain py-3">Contact me</button>
+              <button className="Button py-3">View diplomats</button>
+            </div>
+          </div>
+          <img
+            src={Doctor}
+            alt="doc"
+            className="max-sm:max-w-[380px] text-center m-auto"
+          />
         </div>
       </section>
-      <footer></footer>
+      <section className="max-w-[1320px] items-center m-auto text-center mt-20">
+        <h2 className="text-[95px] max-sm:text-[32px]">Contacts</h2>
+        <div className="mt-20 relative w-full max-sm:flex max-sm:flex-col max-sm:items-center">
+          <img
+            src={Mapp}
+            alt="Map"
+            className="relative w-full h-auto max-sm:w-full"
+          />
+          <div className="bg-[#212121] max-w-[452px] max-h-[253px] z-50 rounded-[24px] p-10 absolute max-sm:relative max-sm:mt-5 max-sm:w-full max-sm:max-w-none left-[40px] max-sm:left-0 bottom-[40px] max-sm:bottom-0 max-sm:bg-[#292929]">
+            <Cuts />
+            <h2 className="text-[40px] max-sm:text-[24px]">
+              Prague, 10 Pražská str.
+            </h2>
+            <p className="text-[16px] max-sm:text-[14px]">
+              +420 (456) 200-10-41
+            </p>
+            <p className="text-[16px] max-sm:text-[14px]">
+              lazarevnfo@gmail.com
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-[1320px] items-center m-auto text-center mt-20">
+        <h3 className="text-[95px] max-sm:text-[32px]">Testimonials</h3>
+        <div className="TestimonalsGrid mt-10">
+          <div className="bg-[#292929] rounded-[24px] p-5 text-left flex flex-col gap-5">
+            <div className="flex justify-between">
+              <h5>Olga Pushkina</h5>
+              <p>4.8</p>
+            </div>
+            <p>
+              I had a massage on the recommendation of friends and I have never
+              regretted it. He is a real professional. You can feel that he
+              works with love for his profession. I will contact him again!
+            </p>
+          </div>
+          <div className="bg-[#292929] rounded-[24px] p-5 text-left flex flex-col gap-5">
+            <div className="flex justify-between">
+              <h5>Olga Pushkina</h5>
+              <p>4.8</p>
+            </div>
+            <p>
+              I had a massage on the recommendation of friends and I have never
+              regretted it. He is a real professional. You can feel that he
+              works with love for his profession. I will contact him again!
+            </p>
+          </div>
+          <div className="bg-[#F28B63] text-black rounded-[24px] p-5 text-left flex flex-col gap-5">
+            <div className="flex justify-between">
+              <h5>Olga Pushkina</h5>
+              <p>4.8</p>
+            </div>
+            <p>
+              I had a massage on the recommendation of friends and I have never
+              regretted it. He is a real professional. You can feel that he
+              works with love for his profession. I will contact him again!
+            </p>
+          </div>
+        </div>
+      </section>
+      <footer className="bg-[#E8E8E8] text-black p-10 mt-32 rounded-t-[60px] max-sm:mt-20">
+        {/* <div className="footer_wrapper flex flex-col justify-between"> */}
+        <div className="footer_logo flex gap-5 ">
+          <Logo />
+          <p className="text-[24px] font-bold max-sm:text-[18px]">
+            Dr. Lazarev
+          </p>
+        </div>
+        <p className="footer_year mt-auto">2023</p>
+        {/* </div> */}
+        <div className="footer_nav flex flex-col mt-10 gap-10 max-sm:gap-5 max-sm:mb-5">
+          <p>About me</p>
+          <p>Sessions</p>
+          <p>rewiews</p>
+        </div>
+
+        <div className=" footer_info flex flex-col gap-10 text-right items-end">
+          <p className="text-[20px] font-bold">+420 (456) 200-10-41</p>
+          <p className="text-[20px] font-bold">lazarevnfo@gmail.com</p>
+          <img src={Media} alt={"Media"} className="max-w-[62px]" />
+          <p>Privacy Policy</p>
+        </div>
+      </footer>
     </main>
   );
 }
